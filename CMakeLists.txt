@@ -33,3 +33,4 @@ add_executable(3d src/3d.cpp)
 target_compile_features(3d PRIVATE cxx_std_17)
 target_link_libraries(3d Python::Python Python::NumPy)
 
+INSTALL(FILES package.xml DESTINATION share/${PROJECT_NAME})

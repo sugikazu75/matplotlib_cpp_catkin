@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+  <name>matplotlib_cpp_test</name>
+  <version>0.0.0</version>
+  <description>matplotlib for C++</description>
+
+  <maintainer email="sugihara@jsk.imi.i.u-tokyo.ac.jp">Kazuki Sugihara</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>cmake</buildtool_depend>
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+
+</package>
