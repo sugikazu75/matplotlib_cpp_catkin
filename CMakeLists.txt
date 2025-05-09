@@ -32,6 +32,8 @@ find_package(catkin REQUIRED)
 
 catkin_package(
   INCLUDE_DIRS matplotlib-cpp
+  CATKIN_DEPENDS
+  DEPENDS Python3
   )
 
 include_directories(
@@ -68,3 +70,5 @@ target_link_libraries(3d Python3::Python Python3::NumPy)
 
 install(TARGETS minimal basic modern xkcd quiver 3d
    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+install(DIRECTORY matplotlib-cpp
+   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
