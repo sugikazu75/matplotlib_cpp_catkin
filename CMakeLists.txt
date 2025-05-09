@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(matplotlib_cpp_test)
+project(matplotlib_cpp_catkin)
 
 # Python3 executable
 find_program(Python3_EXECUTABLE NAMES python3 REQUIRED)

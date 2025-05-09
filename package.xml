@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package>
-  <name>matplotlib_cpp_test</name>
+  <name>matplotlib_cpp_catkin</name>
   <version>0.0.0</version>
   <description>matplotlib for C++</description>
 
