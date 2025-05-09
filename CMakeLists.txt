@@ -30,7 +30,9 @@ message(STATUS "NumPy include: ${NUMPY_INCLUDE_DIR}")
 find_package(Python3 COMPONENTS Development NumPy REQUIRED)
 find_package(catkin REQUIRED)
 
-catkin_package()
+catkin_package(
+  INCLUDE_DIRS matplotlib-cpp
+  )
 
 include_directories(
   matplotlib-cpp
