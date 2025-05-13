@@ -26,18 +26,19 @@ message(STATUS "Python3 include: ${PYTHON3_INCLUDE_DIR}")
 message(STATUS "Python3 library: ${PYTHON3_LIBRARY}")
 message(STATUS "NumPy include: ${NUMPY_INCLUDE_DIR}")
 
-
 find_package(Python3 COMPONENTS Development NumPy REQUIRED)
 find_package(catkin REQUIRED)
+find_package(Eigen3 REQUIRED)
 
 catkin_package(
-  INCLUDE_DIRS matplotlib-cpp
+  INCLUDE_DIRS include ${CMAKE_CURRENT_SOURCE_DIR}/matplotlib-cpp
   CATKIN_DEPENDS
   DEPENDS Python3
   )
 
 include_directories(
-  matplotlib-cpp
+  include
+  ${CMAKE_CURRENT_SOURCE_DIR}/matplotlib-cpp
   ${Python3_INCLUDE_DIRS}
   ${Python3_NumPy_INCLUDE_DIRS}
   )
@@ -70,5 +71,9 @@ target_link_libraries(3d Python3::Python Python3::NumPy)
 
 install(TARGETS minimal basic modern xkcd quiver 3d
    RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-install(DIRECTORY matplotlib-cpp
+
+install(DIRECTORY include/
+   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
+
+install(FILES ${CMAKE_CURRENT_SOURCE_DIR}/matplotlib-cpp/matplotlibcpp.h
    DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
