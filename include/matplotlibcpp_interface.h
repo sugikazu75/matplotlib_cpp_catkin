@@ -5,7 +5,7 @@
 namespace matplotlibcpp_interface
 {
 template<typename VecT>
-  void plotData(const std::vector<VecT>& data, const std::vector<double>& times, const std::string & title = "", bool& show_plot = false)
+  void plotData(const std::vector<VecT>& data, const std::vector<double>& times, const std::string & title = "", bool show_plot = false)
   {
     for(int i = 0; i < data.at(0).size(); i++)
       {
