@@ -1,5 +1,5 @@
+#pragma once
 #include <matplotlib_cpp_catkin/matplotlibcpp.h>
-
 #include <Eigen/Core>
 
 namespace matplotlibcpp_interface
